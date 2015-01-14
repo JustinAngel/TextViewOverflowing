@@ -8,11 +8,10 @@ TextViewOverflowing is a custom android view that allows reflowing from one Text
 1. Grab **TextViewOverflowing.java** and add that to your project (found under *app\src\main\java\net\justinangel\textoverflowexample\* in this repository)
 2. Add a **TextViewOverflowing** and TextView to your UI. 
 
-         <net.justinangel.textoverflowexample.TextViewOverflowing
+          <net.justinangel.textoverflowexample.TextViewOverflowing
            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id elit tempus, semper elit et, faucibus leo. Suspendisse urna urna, ornare in rutrum et, rhoncus sed risus."
            android:id="@+id/TextViewOverflowing" />
-
-         <TextView android:text="I'm overflow text placeholder"
+          <TextView android:text="I'm overflow text placeholder"
             android:id="@+id/overflowTextView" />
 
 3. Hookup the TextViewOverflowing to your overflow TextView. 
@@ -25,7 +24,8 @@ TextViewOverflowing is a custom android view that allows reflowing from one Text
 ### More options 
 
 - It's possible to manually reflow text by registering to **TextViewOverflowing.setOverflowTextListener**.
-         textViewOverflowing.setOverflowTextListener(new TextViewOverflowing.OverflowTextListener() {
+ 
+          textViewOverflowing.setOverflowTextListener(new TextViewOverflowing.OverflowTextListener() {
             @Override
             public void overflowTextCalculated(String overflowText) {
                 textViewOverflowing.setOverflowTextListener(null);
